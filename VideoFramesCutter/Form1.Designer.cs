@@ -40,6 +40,7 @@ namespace VideoFramesCutter
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
             this.cutsCount = new System.Windows.Forms.ToolStripStatusLabel();
             this.label3 = new System.Windows.Forms.Label();
+            this.lastDelta = new System.Windows.Forms.ToolStripStatusLabel();
             ((System.ComponentModel.ISupportInitialize)(this.frames_step_num)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.compare_threshold_num)).BeginInit();
             this.statusStrip1.SuspendLayout();
@@ -133,7 +134,8 @@ namespace VideoFramesCutter
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripProgressBar1,
-            this.cutsCount});
+            this.cutsCount,
+            this.lastDelta});
             this.statusStrip1.Location = new System.Drawing.Point(0, 179);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(692, 22);
@@ -159,6 +161,14 @@ namespace VideoFramesCutter
             this.label3.Size = new System.Drawing.Size(49, 13);
             this.label3.TabIndex = 8;
             this.label3.Text = "Filename";
+            // 
+            // lastDelta
+            // 
+            this.lastDelta.Name = "lastDelta";
+            this.lastDelta.Size = new System.Drawing.Size(562, 17);
+            this.lastDelta.Spring = true;
+            this.lastDelta.Text = "0";
+            this.lastDelta.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // Form1
             // 
@@ -198,6 +208,7 @@ namespace VideoFramesCutter
         private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
         private System.Windows.Forms.ToolStripStatusLabel cutsCount;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ToolStripStatusLabel lastDelta;
     }
 }
 

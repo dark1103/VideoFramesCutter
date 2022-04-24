@@ -93,7 +93,10 @@ namespace VideoFramesCutter
                             {
                                 bmpToSave = (Bitmap)bmp2.Clone();
 
-                                if (k == 1 || CompareBitmaps(BitmapToBites(bmp1), BitmapToBites(bmp2)) > compareThr)
+                                var delta = CompareBitmaps(BitmapToBites(bmp1), BitmapToBites(bmp2));
+                                lastDelta.Text = delta.ToString();
+
+                                if (k == 1 || delta > compareThr)
                                 {
                                     bmpToSave.Save(Path.Combine(outputPath, k + ".jpg"), ImageFormat.Jpeg);
                                     this.Invoke(new Action(() =>
