@@ -39,8 +39,9 @@ namespace VideoFramesCutter
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
             this.cutsCount = new System.Windows.Forms.ToolStripStatusLabel();
-            this.label3 = new System.Windows.Forms.Label();
             this.lastDelta = new System.Windows.Forms.ToolStripStatusLabel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.open_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.frames_step_num)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.compare_threshold_num)).BeginInit();
             this.statusStrip1.SuspendLayout();
@@ -60,7 +61,7 @@ namespace VideoFramesCutter
             // 
             this.textBox1.Location = new System.Drawing.Point(110, 12);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(557, 20);
+            this.textBox1.Size = new System.Drawing.Size(466, 20);
             this.textBox1.TabIndex = 1;
             // 
             // frames_step_num
@@ -153,6 +154,14 @@ namespace VideoFramesCutter
             this.cutsCount.Size = new System.Drawing.Size(13, 17);
             this.cutsCount.Text = "0";
             // 
+            // lastDelta
+            // 
+            this.lastDelta.Name = "lastDelta";
+            this.lastDelta.Size = new System.Drawing.Size(562, 17);
+            this.lastDelta.Spring = true;
+            this.lastDelta.Text = "0";
+            this.lastDelta.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -162,19 +171,22 @@ namespace VideoFramesCutter
             this.label3.TabIndex = 8;
             this.label3.Text = "Filename";
             // 
-            // lastDelta
+            // open_btn
             // 
-            this.lastDelta.Name = "lastDelta";
-            this.lastDelta.Size = new System.Drawing.Size(562, 17);
-            this.lastDelta.Spring = true;
-            this.lastDelta.Text = "0";
-            this.lastDelta.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.open_btn.Location = new System.Drawing.Point(582, 10);
+            this.open_btn.Name = "open_btn";
+            this.open_btn.Size = new System.Drawing.Size(98, 23);
+            this.open_btn.TabIndex = 9;
+            this.open_btn.Text = "Open";
+            this.open_btn.UseVisualStyleBackColor = true;
+            this.open_btn.Click += new System.EventHandler(this.open_btn_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(692, 201);
+            this.Controls.Add(this.open_btn);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.stop_button);
@@ -209,6 +221,7 @@ namespace VideoFramesCutter
         private System.Windows.Forms.ToolStripStatusLabel cutsCount;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ToolStripStatusLabel lastDelta;
+        private System.Windows.Forms.Button open_btn;
     }
 }
 

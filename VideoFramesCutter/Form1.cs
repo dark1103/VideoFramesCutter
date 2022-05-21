@@ -1,20 +1,11 @@
-﻿using MediaToolkit.Model;
-using MediaToolkit.Options;
-using MediaToolkit;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using System;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Accord.Video.FFMPEG;
 using System.Runtime.InteropServices;
 using System.Drawing.Imaging;
-using System.Collections;
 using System.Collections.Concurrent;
 
 namespace VideoFramesCutter
@@ -189,6 +180,15 @@ namespace VideoFramesCutter
         private void stop_button_Click(object sender, EventArgs e)
         {
             stop = true;
+        }
+
+        private void open_btn_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                textBox1.Text = dialog.FileName;
+            }
         }
     }
 }
